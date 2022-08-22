@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #ffeedf;
+    color: #145434;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+h1{
+    font-size: 2.5rem;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.material-icons.md-36{ 
+    font-size: 36px; 
+}
+
+nav h1{
+    font-weight: 700;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 80px;
+    padding: 50px 100px;
+    margin: auto;  
+    counter-reset: counter-name;  
+}
+.container{
+    background: #145434;
+    color: #ffeedf;
+    height: 300px;
+    width: 400px;
+    padding: 50px;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+.container::before {
+    counter-increment: counter-name;
+    content: counter(counter-name);
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background:#ffeedf;
+    border:2px #145434 solid;
+    color: #145434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+}
+
+
+.container h1{
+    font-weight: 300;
+    /* margin-bottom: 60px; */
+    height: 60%;
+}
+
+button {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    border: 2px #145434 solid;
+    height: 50px;
+    width: 200px;
+    background: #ffeedf;
+    color: #145434;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    bottom: -10px;
+    right: -10px;
+
+}
+
+
+button span{
+    position: absolute;
+    right: 0px;
+}
